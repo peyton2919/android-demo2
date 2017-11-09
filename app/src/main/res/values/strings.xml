@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">android-demo</string>
+    <string name="app_title">android学习库</string>
+    <string name="app_okhttp">OKHttp</string>
+    <string name="okhttp_btn_get_post">get和post请求</string>
+    <string name="okhttp_btn_post">post请求</string>
+    <string name="okhttp_tv_display">显示请求数据</string>
+    <string name="okhttp_btn_get_okhttputils">OKHttpUtils Get request</string>
+    <string name="okhttp_btn_downloadfile">下载文件</string>
 </resources>

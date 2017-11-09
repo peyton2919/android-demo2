@@ -125,11 +125,8 @@ public class MainActivity  extends FragmentActivity{
                 if (null != to){
                     ft.show(to).commit();
                 }
-
             }
-
         }
-
     }
 
 //    private void switchFragment(BaseFragment fragment) {

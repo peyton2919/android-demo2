@@ -1,5 +1,6 @@
 package cn.peyton.android.demo.fragment;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.util.Log;
 import android.view.Gravity;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import cn.peyton.android.demo.R;
+import cn.peyton.android.demo.activity.OKHttpActivity;
 import cn.peyton.android.demo.adapter.CommonFrameFragmentAdapter;
 import cn.peyton.android.demo.base.BaseFragment;
 
@@ -37,13 +39,19 @@ public class CommonFrameFragment extends BaseFragment{
     @Override
     protected View intiView() {
         Log.e(TAG,"常用框架Fragment页面初始化...");
-       View view = View.inflate(mContext, R.layout.fragment_common_frame,null);
+        View view = View.inflate(mContext, R.layout.fragment_common_frame,null);
         mListView = (ListView) view.findViewById(R.id.listview);
         //设置点击事件
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String data = datas[position];
+                if (data.toLowerCase().equals("okhttp")){
+                    Intent intent = new Intent(mContext, OKHttpActivity.class);
+                    startActivity(intent);
+                }else if (data.toLowerCase().equals("nativejsonprase")){
+
+                }
                 Toast.makeText(mContext,"data == " + data,Toast.LENGTH_LONG).show();
             }
         });
