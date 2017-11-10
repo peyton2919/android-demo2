@@ -1,4 +1,4 @@
-package cn.peyton.android.demo.adapter;
+package cn.peyton.android.demo.okhttp.adapter;
 
 import android.content.Context;
 import android.graphics.Color;

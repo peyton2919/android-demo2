@@ -1,18 +1,19 @@
 package cn.peyton.android.demo.fragment;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import cn.peyton.android.demo.R;
-import cn.peyton.android.demo.activity.OKHttpActivity;
-import cn.peyton.android.demo.adapter.CommonFrameFragmentAdapter;
+import cn.peyton.android.demo.json.activity.GsonActivity;
+import cn.peyton.android.demo.json.activity.NativeJsonPraseActivity;
+import cn.peyton.android.demo.glide.activity.GlideActivity;
+import cn.peyton.android.demo.json.activity.FastJsonActivity;
+import cn.peyton.android.demo.okhttp.activity.OKHttpActivity;
+import cn.peyton.android.demo.okhttp.adapter.CommonFrameFragmentAdapter;
 import cn.peyton.android.demo.base.BaseFragment;
 
 /**
@@ -46,14 +47,22 @@ public class CommonFrameFragment extends BaseFragment{
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String data = datas[position];
-                if (data.toLowerCase().equals("okhttp")){
+                if (data.toLowerCase().equals("okhttp")){//okhttp
                     Intent intent = new Intent(mContext, OKHttpActivity.class);
                     startActivity(intent);
-                }else if (data.toLowerCase().equals("nativejsonprase")){
-
+                }else if (data.toLowerCase().equals("nativejsonprase")){//json
+                    Intent intent = new Intent(mContext,NativeJsonPraseActivity.class);
+                    startActivity(intent);
+                }else if(data.toLowerCase().equals("gson")) {//gson
+                    startActivity(new Intent(mContext,GsonActivity.class));
+                }else if(data.toLowerCase().equals("fastjson")) {
+                    startActivity(new Intent(mContext,FastJsonActivity.class));
+                }else if (data.toLowerCase().equals("glide")){
+                    Intent intent = new Intent(mContext,GlideActivity.class);
+                    startActivity(intent);
                 }
                 Toast.makeText(mContext,"data == " + data,Toast.LENGTH_LONG).show();
-            }
+           }
         });
         return view;
     }
@@ -62,8 +71,9 @@ public class CommonFrameFragment extends BaseFragment{
     protected void initData() {
         super.initData();
         //准备数据
-        datas = new String[]{"OKHttp","xUtils3","Retrofit2","Fresco","Glide","greenDao",
-                "RxJava","volley","Gson","FastJson","picasso","evenBUs","jcvideoplayer",
+        datas = new String[]{"OKHttp","nativejsonprase","Gson","FastJson","xUtils3","Retrofit2",
+                "Fresco","Imageloader","Picasso","RecyclerView","Glide","greenDao",
+                "RxJava","volley","picasso","evenBUs","jcvideoplayer",
                 "pulltorefresh","Expandablelistview","UniversalVideoView","......"};
         //设置适配器
         adapter = new CommonFrameFragmentAdapter(mContext,datas);

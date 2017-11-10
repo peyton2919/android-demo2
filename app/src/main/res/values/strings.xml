@@ -7,4 +7,24 @@
     <string name="okhttp_tv_display">显示请求数据</string>
     <string name="okhttp_btn_get_okhttputils">OKHttpUtils Get request</string>
     <string name="okhttp_btn_downloadfile">下载文件</string>
+    <string name="load_image">加载图片</string>
+    <string name="load_image_list">请求列表中图片</string>
+    <string name="okhttputils_list">没有数据...</string>
+    <string name="glide_base">基本方法使用</string>
+    <string name="glide_base_rl_load">RecyclerView加载图片</string>
+    <string name="glide_base_change">图片变换</string>
+    <string name="native_tv_tojavaobject">将JSON对象转换为JAVA对象</string>
+    <string name="native_tv_tojavalist">将JSON对象转换为JAVA集合</string>
+    <string name="native_tv_complex">复杂JSON数据解析</string>
+    <string name="native_tv_special">特殊JSON数据解析</string>
+    <string name="native_tv_original">原始数据</string>
+    <string name="native_tv_changedata">转换后数据</string>
+    <string name="gson_tv_tojavaobject">将JSON对象转换为JAVA对象</string>
+    <string name="gson_tv_tojavalist">将JSON数组转换为JAVA集合</string>
+    <string name="gson_tv_tojsonobject">将JAVA对象转换为JSON对象</string>
+    <string name="gson_tv_tojsonlist">将JAVA集合转换为JSON数组</string>
+    <string name="fastjson_tv_tojavaobject">将JSON对象转换为JAVA对象</string>
+    <string name="fastjson_tv_tojavalist">将JSON数组转换为JAVA集合</string>
+    <string name="fastjson_tv_tojsonobject">将JAVA对象转换为JSON对象</string>
+    <string name="fastjson_tv_tojsonlist">将JAVA集合转换为JSON数组</string>
 </resources>

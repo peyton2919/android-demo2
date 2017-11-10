@@ -20,7 +20,14 @@
         </activity>
         <activity android:name=".MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"></activity>
-        <activity android:name=".activity.OKHttpActivity"></activity>
+        <activity android:name=".okhttp.activity.OKHttpActivity"></activity>
+        <activity android:name=".okhttp.activity.OKHttpListActivity"></activity>
+        <activity android:name=".json.activity.NativeJsonPraseActivity"/>
+        <activity android:name=".json.activity.GsonActivity"/>
+        <activity android:name=".json.activity.FastJsonActivity"/>
+
+        <activity android:name=".glide.activity.GlideActivity"/>
+
     </application>
 
 </manifest>
